@@ -68,9 +68,11 @@
 
                     // in very clear cases, let newlines become <br /> tags
                      /*jshint -W049 */
-                    text = text.replace(/^[\w\<\'\'][^\n]*\n+/gm, function (x) {
-                        return x.match(/\n{2}/) ? x : x.trim() + '  \n';
-                    });
+                    // XXX: Disabled by mikl, I want standard Markdown
+                    // linebreaks, please.
+                    // text = text.replace(/^[\w\<\"\'][^\n]*\n+/gm, function (x) {
+                    //     return x.match(/\n{2}/) ? x : x.trim() + "  \n";
+                    // });
                      /*jshint +W049 */
 
                     // better URL support, but no title support
